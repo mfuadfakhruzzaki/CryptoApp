@@ -17,8 +17,8 @@ export default function TabsLayout() {
         tabBarStyle: {
           backgroundColor: "#1e1e1e", // Dark navbar background color
           paddingTop: 10, // Top padding for navbar
-          paddingBottom: Platform.OS === "ios" ? 20 : 10, // Bottom padding adjusted for iOS
-          height: Platform.OS === "ios" ? 100 : 60, // Navbar height adjusted per platform
+          paddingBottom: Platform.OS === "ios" ? 20 : 20, // Bottom padding adjusted for iOS
+          height: Platform.OS === "ios" ? 100 : 80, // Navbar height adjusted per platform
           borderTopWidth: 0, // Remove default top border
           shadowColor: "#000", // Shadow color
           shadowOffset: { width: 0, height: -2 }, // Shadow offset
@@ -74,6 +74,20 @@ export default function TabsLayout() {
           tabBarIcon: ({ color, size }) => (
             <FontAwesome6
               name="question-circle" // Updated Ionicon for Help
+              color={color}
+              size={size + 2}
+            />
+          ),
+          headerShown: false, // Hide header on this screen
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome6
+              name="user-large" // Updated Ionicon for Help
               color={color}
               size={size + 2}
             />
