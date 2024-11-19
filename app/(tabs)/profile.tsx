@@ -138,7 +138,9 @@ export default function ProfileScreen() {
               source={
                 profilePic
                   ? { uri: profilePic }
-                  : require("../../assets/images/default.png")
+                  : {
+                      uri: "https://avatars.dicebear.com/api/adventurer-neutral/mail%40ashallendesign.co.uk.svg",
+                    }
               }
               onError={(error) =>
                 console.log("Image Load Error:", error.nativeEvent.error)
