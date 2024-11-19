@@ -138,7 +138,7 @@ export default function ProfileScreen() {
               source={
                 profilePic
                   ? { uri: profilePic }
-                  : require("../../assets/images/default-profile-pic.png")
+                  : require("../../assets/images/default.png")
               }
               onError={(error) =>
                 console.log("Image Load Error:", error.nativeEvent.error)
